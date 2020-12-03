@@ -30,6 +30,10 @@ class GiphyMediaViewManager: RCTViewManager {
   override func view() -> UIView! {
     return mediaView
   }
+    
+  @objc override static func requiresMainQueueSetup() -> Bool {
+     return true
+  }
 }
 
 // MARK:- Setters

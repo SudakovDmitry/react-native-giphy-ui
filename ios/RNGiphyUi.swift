@@ -35,7 +35,7 @@ class RNGiphyUI: RCTEventEmitter {
   
   private func setupGiphy(_ giphy: GiphyViewController, config: [String: Any]) {
     let theme = (config["theme"] as? String) ?? "dark"
-    let layout = (config["layout"] as? String) ?? "waterfall"
+//    let layout = (config["layout"] as? String) ?? "waterfall"
     let showConfirmationScreen = (config["showConfirmationScreen"] as? Bool) ?? true
     let shouldLocalizeSearch = config["shouldLocalizeSearch"] as? Bool ?? true
     let trayHeightMultipler = config["trayHeightMultipler"] as? CGFloat ?? 0.7

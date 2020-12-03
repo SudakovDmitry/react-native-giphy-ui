@@ -38,23 +38,23 @@ enum GiphyTheme: String, GiphyEnum {
   }
 }
 
-enum GiphyLayout: String, GiphyEnum {
-  typealias Enum = GPHGridLayout
-  
-  case waterfall
-  case carousel
-  
-  var actualValue: GPHGridLayout {
-    switch self.rawValue {
-    case "waterfall":
-      return .waterfall
-    case "carousel":
-      return .carousel
-    default:
-      return .waterfall
-    }
-  }
-}
+//enum GiphyLayout: String, GiphyEnum {
+//  typealias Enum = GPHGridLayout
+//
+//  case waterfall
+//  case carousel
+//
+//  var actualValue: GPHGridLayout {
+//    switch self.rawValue {
+//    case "waterfall":
+//      return .waterfall
+//    case "carousel":
+//      return .carousel
+//    default:
+//      return .waterfall
+//    }
+//  }
+//}
 
 enum GiphyRating: String, GiphyEnum {
   typealias Enum = GPHRatingType
