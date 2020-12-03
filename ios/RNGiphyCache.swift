@@ -31,7 +31,7 @@ class RNGiphyCache: NSObject {
     GPHCache.shared.clear()
   }
 
-  @objc func downloadAssetUrl(_ url: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+  @objc func downloadAssetUrl(_ url: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
     GPHCache.shared.downloadAsset(url) { (image, error) in
       if let image = image, let data = image.pngData() {
         resolve([
