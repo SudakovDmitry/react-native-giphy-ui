@@ -6,18 +6,14 @@ class GiphyCache {
     RNGiphyCache.setDiskCacheByteLimit(limit);
   }
 
-  static setSetting(setting: 'memoryOnly' | 'diskOnly') {
-    RNGiphyCache.setCacheSetting(setting);
-  }
-
-  static downloadAssetUrl(
+  static downloadAssetData(
     url: string
   ): Promise<{
     width: number;
     height: number;
     data: string;
   }> {
-    return RNGiphyCache.downloadAssetUrl(url);
+    return RNGiphyCache.downloadAssetData(url);
   }
 }
 
