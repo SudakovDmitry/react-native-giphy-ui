@@ -16,22 +16,11 @@ class RNGiphyCache: NSObject {
     GPHCache.shared.diskCacheByteLimit = UInt(limit)
   }
 
-  @objc func setCacheSetting(_ setting: String) {
-//    switch setting {
-//    case "memoryOnly":
-//      GPHCache.shared.setting = .memoryOnly
-//    case "diskOnly":
-//      GPHCache.shared.setting = .diskOnly
-//    default:
-//      break
-//    }
-  }
-
-  @objc func clearCache() {
+  @objc func clear() {
     GPHCache.shared.clear()
   }
 
-  @objc func downloadAssetUrl(_ url: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+  @objc func downloadAssetData(_ url: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
     GPHCache.shared.downloadAsset(url) { (image, error) in
       if let image = image, let data = image.pngData() {
         resolve([

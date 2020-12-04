@@ -20,7 +20,6 @@
 
 RCT_EXTERN_METHOD(clear)
 RCT_EXTERN_METHOD(setDiskCacheByteLimit: (int)limit)
-RCT_EXTERN_METHOD(setSetting: (NSString *)setting)
-RCT_EXTERN_METHOD(downloadAssetUrl: (NSString *)url resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(downloadAssetData: (NSString *)url resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock) reject)
 
 @end
